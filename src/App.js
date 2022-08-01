@@ -5,16 +5,16 @@ import Header from './components/Header/Header'
 import List from './components/List/List';
 import Map from './components/Map/Map';
 import PlaceDetail from './components/PlaceDetail/PlaceDetail';
-import { getPlacesData } from './API';
+import { getPlaceData } from './API';
 import { Data } from '@react-google-maps/api';
 
 const App = () => {
   const [places, setPlaces] = useState([]);
 
   useEffect(() => {
-    getPlacesData();
+    getPlaceData()
       .then((data) => {
-        setPlaces(data);
+        setPlaces();
       })
   }, []);
 
