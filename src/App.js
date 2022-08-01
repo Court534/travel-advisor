@@ -1,12 +1,22 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { CssBaseline, Grid } from '@material-ui/core';
 
-import Header from './components/Header/Header';
+import Header from './components/Header/Header'
 import List from './components/List/List';
 import Map from './components/Map/Map';
 import PlaceDetail from './components/PlaceDetail/PlaceDetail';
+import { getPlacesData } from './API';
+import { Data } from '@react-google-maps/api';
 
 const App = () => {
+  const [places, setPlaces] = useState([]);
+
+  useEffect(() => {
+    getPlacesData();
+      .then((data) => {
+        setPlaces(data);
+      })
+  }, []);
 
   return (
     <>
