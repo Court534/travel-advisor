@@ -13,7 +13,7 @@ const App = () => {
 
   useEffect(() => {
     getPlaceData()
-      .then((data) => {
+      .then((data) => {  // <-- Was having issue with this part of the code causing a issue with the rendering
         setPlaces();
       })
   }, []);
