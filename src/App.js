@@ -11,10 +11,15 @@ import { Data } from '@react-google-maps/api';
 const App = () => {
   const [places, setPlaces] = useState([]);
 
+  const [coordinates, setCoordinates] = useState({});
+  const [bounds, setBounds] = useState(null);
+
   useEffect(() => {
     getPlaceData()
       .then((data) => {  // <-- Was having issue with this part of the code causing a issue with the rendering
-        setPlaces();
+        console.log(data);
+        
+        setPlaces(data);
       })
   }, []);
 
@@ -27,7 +32,11 @@ const App = () => {
           <List />
         </Grid>
         <Grid item xs={12} md={8}>
-          <Map />
+          <Map 
+            setCoordinates={setCoordinates}
+            setBounds={setBounds}
+            coordinates={setCoordinates}
+          />
         </Grid>
       </Grid>
     </>
