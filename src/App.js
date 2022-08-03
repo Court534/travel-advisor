@@ -15,13 +15,14 @@ const App = () => {
   const [bounds, setBounds] = useState(null);
 
   useEffect(() => {
+
     getPlaceData()
       .then((data) => {  // <-- Was having issue with this part of the code causing a issue with the rendering
         console.log(data);
         
         setPlaces(data);
       })
-  }, []);
+  }, [coordinates, bounds]);
 
   return (
     <>
@@ -35,7 +36,7 @@ const App = () => {
           <Map 
             setCoordinates={setCoordinates}
             setBounds={setBounds}
-            coordinates={setCoordinates}
+            coordinates={coordinates}
           />
         </Grid>
       </Grid>
