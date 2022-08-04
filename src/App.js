@@ -15,6 +15,12 @@ const App = () => {
   const [bounds, setBounds] = useState(null);
 
   useEffect(() => {
+    navigator.geolocation.getCurrentPosition(({ coords: {latitude, longitude} }) => {
+      setCoordinates({  lat: latitude, lng: longitude })
+    })
+  }, []);
+
+  useEffect(() => {
 
     getPlaceData()
       .then((data) => {  // <-- Was having issue with this part of the code causing a issue with the rendering
