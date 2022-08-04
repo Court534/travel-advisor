@@ -7,7 +7,7 @@ export const getPlaceData = async (sw, ne) => {
     const { data: { data } } = await axios.get(URL, {
       params: {
         bl_latitude: sw.lat,
-        tr_latitude: ne.lat,
+        tr_latitude: ne.lng,
         bl_longitude: sw.lng,
         tr_longitude: ne.lng,
       },
