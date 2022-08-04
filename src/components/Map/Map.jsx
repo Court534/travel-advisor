@@ -21,7 +21,7 @@ const Map = ({ setCoordinates, setBounds, coordinates }) => {
         margin={[50, 50, 50, 50]}
         options={''}
         onChange={(e) => {
-          setCoordinates({ lat: e.center.lat, lng: e.center.lng})
+          setCoordinates({ lat: e.center.lat, lng: e.center.lng});
         }}
         onChildClick={''}>
           
