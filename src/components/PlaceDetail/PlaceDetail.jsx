@@ -32,9 +32,9 @@ const PlaceDetail = ({ place }) => {
           <Typography variant='subtitle2' color='textSecondary'>{award.display_name}</Typography>
         </Box>
       ))}
-      {place?.cuisine?.map(({ name }) => {
-        <Chip key={name} size='small' label={name} className={classes.chip}> </Chip>
-      })}
+      {place?.cuisine?.map(({ name }) => (
+        <Chip key={name} size='small' label={name} className={classes.chip} />
+      ))}
     </CardContent>
    </Card>
   )
