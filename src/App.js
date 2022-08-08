@@ -38,7 +38,7 @@ const App = () => {
     setIsLoading(true);
     getPlaceData(type, bounds.sw, bounds.ne)
       .then((data) => {
-        setPlaces(data);
+        setPlaces(data.filter());
         setFilteredPlaces([]);
         setIsLoading(false);
       })
