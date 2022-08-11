@@ -19,3 +19,11 @@ export const getPlaceData = async (type, sw, ne) => {
   } catch (error) {
   }
 }
+
+export const getWeatherData = async () => {
+  try {
+    const { data: { data } } = await axios.get('https://open-weather13.p.rapidapi.com/city/landon');
+  } catch (error) {
+    console.log(error)  
+  }
+}
