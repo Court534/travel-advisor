@@ -10,7 +10,7 @@ What I learned created this project:
 - Advanced React Best Practices such as folder & file structure, hooks and refs
 - Creating a User Interface using Material UI
 - Working with Google Maps API
-- Fetching data from using RapidAPI
+- Fetching data from Travel Advisor API through RapidAPI
 - Essentially, you'll become the master of working with APIs
 
 ## View Live
