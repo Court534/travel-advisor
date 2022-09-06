@@ -11,7 +11,6 @@ What I learned created this project:
 - Creating a User Interface using Material UI
 - Working with Google Maps API
 - Fetching data from Travel Advisor API through RapidAPI
-- Essentially, you'll become the master of working with APIs
 
 ## View Live
 
